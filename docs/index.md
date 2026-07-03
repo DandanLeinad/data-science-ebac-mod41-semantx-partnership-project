@@ -1,173 +1,87 @@
 ---
-icon: lucide/rocket
+title: Início
+description: Previsão e segmentação da qualidade de vinhos com PCA, K-Means, regressão e inferência estatística.
 ---
 
-# Get started
+# Previsão e Segmentação da Qualidade de Vinhos
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+**Projeto Módulo 41 — Parceria EBAC x Semantix**
 
-## Commands
+Este projeto aplica um pipeline completo de ciência de dados — inferência estatística,
+redução de dimensionalidade (PCA), segmentação (K-Means) e modelos preditivos
+(Regressão Linear e Random Forest) — para responder a uma pergunta prática de negócio:
+**é possível prever a nota de qualidade de um vinho a partir apenas de suas
+propriedades físico-químicas, sem depender de um painel de degustadores?**
 
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
+## Contexto de negócio
 
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
+Avaliar a qualidade de um vinho hoje depende, em grande parte, de degustadores
+humanos: um processo caro, lento e sujeito a variação subjetiva. Uma vinícola que
+consiga estimar a nota sensorial a partir de medições físico-químicas rápidas
+(acidez, teor alcoólico, densidade, sulfatos etc.) ganha um instrumento de
+**controle de qualidade** mais barato e mais rápido, além de um mapa dos
+**perfis de vinho** que compõem seu portfólio.
 
-## Examples
+## Objetivo
 
-### Admonitions
+!!! abstract "Objetivo do projeto"
+    Prever a qualidade de vinhos a partir de suas propriedades físico-químicas e
+    identificar perfis (clusters) de vinhos, aplicando PCA, K-Means, inferência
+    estatística, regressão e combinação de modelos.
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
+## O que você vai encontrar aqui
 
-!!! note
+<div class="grid cards" markdown>
 
-    This is a **note** admonition. Use it to provide helpful information.
+- :material-database:{ .lg .middle } **Coleta de Dados**
 
-!!! warning
+    ---
 
-    This is a **warning** admonition. Be careful!
+    Origem, licença e características do dataset utilizado.
 
-### Details
+    [:octicons-arrow-right-24: Ver página](coleta-de-dados.md)
 
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
+- :material-chart-scatter-plot:{ .lg .middle } **Modelagem**
 
-??? info "Click to expand for more info"
+    ---
 
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
+    Análise exploratória, inferência estatística, PCA, K-Means, regressão e
+    comparação de modelos — com todos os gráficos gerados na análise.
 
-## Code Blocks
+    [:octicons-arrow-right-24: Ver página](modelagem/index.md)
 
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
+- :material-flag-checkered:{ .lg .middle } **Conclusões**
 
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
+    ---
 
-greet("Python")
-```
+    Principais achados e aplicações práticas para uma vinícola.
 
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
+    [:octicons-arrow-right-24: Ver página](conclusoes.md)
 
-    Code annotations allow to attach notes to lines of code.
+</div>
 
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
+## Resumo dos principais resultados
 
-## Content tabs
+| Pergunta                              | Resposta                                                              |
+| -------------------------------------- | ----------------------------------------------------------------------- |
+| O teor alcoólico influencia a qualidade? | Sim — correlação de Pearson de 0,44 (p < 0,001)                        |
+| Tinto e branco têm qualidade diferente? | Sim, diferença estatisticamente significativa (teste t, p < 0,001)     |
+| Quantos perfis de vinho existem?       | 3 clusters (baixa, média e alta qualidade), identificados via K-Means  |
+| Qual o melhor modelo preditivo?        | Random Forest (R² = 0,50), superando a Regressão Linear (R² = 0,26)    |
 
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
+Os detalhes de cada etapa, com os gráficos gerados na análise, estão nas páginas
+de [Modelagem](modelagem/index.md). Os principais aprendizados e recomendações de
+negócio estão reunidos em [Conclusões](conclusoes.md).
 
-=== "Python"
+## Fonte dos dados
 
-    ``` python
-    print("Hello from Python!")
-    ```
+Os dados utilizados são públicos, vêm do [UCI Machine Learning Repository — Wine
+Quality](https://archive.ics.uci.edu/dataset/186/wine+quality) e estão sob
+licença **CC BY 4.0**. Mais detalhes na página [Coleta de Dados](coleta-de-dados.md).
 
-=== "Rust"
+## Ferramentas utilizadas
 
-    ``` rs
-    println!("Hello from Rust!");
-    ```
+`pandas` · `numpy` · `matplotlib` · `seaborn` · `scipy` · `scikit-learn`
 
-## Diagrams
-
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
-
-
-## Formatting
-
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
-
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
-
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+A documentação que você está lendo é gerada com [Zensical](https://zensical.org)
+e publicada automaticamente via GitHub Pages a cada push na branch `main`.
