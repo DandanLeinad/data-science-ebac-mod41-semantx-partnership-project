@@ -81,17 +81,3 @@ A documentação completa (com narrativas, gráficos e código) está publicada 
 1. **Controle de qualidade automatizado** — prever nota sensorial a partir de análises laboratoriais rápidas
 2. **Ajuste de processo** — monitorar `volatile acidity` e `sulphates` para evitar perfil de baixa qualidade
 3. **Segmentação de portfólio** — posicionar vinhos (entrada/intermediário/premium) com base em clusters
-
----
-
-## 📄 Licença
-
-Dados: **CC BY 4.0** (UCI Wine Quality)  
-Código: **MIT License**
-
----
-
-## 👤 Autor
-
-**Daniel** — Projeto Módulo 41 EBAC × Semantix  
-GitHub: [@DandanLeinad](https://github.com/DandanLeinad)
