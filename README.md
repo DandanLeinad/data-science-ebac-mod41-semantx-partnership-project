@@ -70,7 +70,7 @@ jupyter lab semantx-partnership-project.ipynb
 
 A documentação completa (com narrativas, gráficos e código) está publicada via **Zensical + GitHub Pages**:
 
-🔗 **[https://DandanLeinad.github.io/data-science-ebac-mod42-semantx-partnership-project/](https://DandanLeinad.github.io/data-science-ebac-mod42-semantx-partnership-project/)**
+🔗 **[https://DandanLeinad.github.io/data-science-ebac-mod42-semantx-partnership-project/](https://DandanLeinad.github.io/data-science-ebac-mod41-semantx-partnership-project/)**
 
 > Para rebuildar localmente: `pip install zensical && zensical build`
 
