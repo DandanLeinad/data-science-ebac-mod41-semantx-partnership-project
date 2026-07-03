@@ -125,7 +125,7 @@ nav = [
 # Read more:
 # - https://zensical.org/docs/setup/language/
 #
-language = "pt-br"
+language = "pt-BR"
 
 # Zensical provides a number of feature toggles that change the behavior
 # of the documentation site.
